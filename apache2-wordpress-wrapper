@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+
+marker='/***** meeque customizations *****/'
+
+if ! grep --quiet --fixed-strings "${marker}" wp-includes/functions.php
+then
+    (
+        echo
+        echo "${marker}"
+        echo
+        echo '// prevent overly eager resizing of large image uploads'
+        echo 'add_filter( "big_image_size_threshold", "__return_false" );'
+    ) \
+    >> wp-includes/functions.php
+fi
+
+exec "$@"
+
