@@ -17,16 +17,6 @@ then
         echo 'add_filter( "mime_types", "mq_add_mime_types" );'
         echo 'add_filter( "upload_mimes", "mq_add_mime_types" );'
         echo
-        echo '// override real_mime of gpx files'
-        echo 'function mq_check_gpx_file_type( $wp_check_filetype_and_ext, $file, $filename, $mimes, $real_mime ) {'
-        echo '    if ( substr_compare( $file, ".gpx", -4, 4, true ) ) {'
-        echo '        $wp_check_filetype_and_ext["ext"] = "gpx";'
-        echo '        $wp_check_filetype_and_ext["type"] = "text/xml";'
-        echo '    }'
-        echo '    return $wp_check_filetype_and_ext;'
-        echo '}'
-        echo 'add_filter( "wp_check_filetype_and_ext", "mq_check_gpx_file_type", 10, 5 );'
-        echo
         echo '// prevent overly eager resizing of large image uploads'
         echo 'add_filter( "big_image_size_threshold", "__return_false" );'
     ) \
