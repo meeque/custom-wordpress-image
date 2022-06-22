@@ -1,4 +1,4 @@
-FROM wordpress:5-apache
+FROM wordpress:6-apache
 
 COPY apache2-wordpress-wrapper /usr/local/bin/
 
