@@ -1,4 +1,4 @@
-FROM wordpress@sha256:fb401b91fa9dedc1b04095e55debd6a593e77a68e346e761010f39ccbb0247e7
+FROM wordpress@sha256:82992631a486e7edc2de46ca9894b8da09e958c0a7fa3ca6bf28c7a94315e334
 
 COPY apache2-wordpress-wrapper /usr/local/bin/
 
