@@ -1,5 +1,5 @@
 # this image is following wordpress:apache
-FROM wordpress@sha256:d5ac2ba9449cd3ade453df2209426e412f671e6185bedccc0ecf983998d6c72d
+FROM wordpress@sha256:9acb6958caf4d95ffa4632a2b8d1de41e7c0286b0f94c2d4b74ce6e09a3fd5cb
 
 COPY apache2-wordpress-wrapper /usr/local/bin/
 
